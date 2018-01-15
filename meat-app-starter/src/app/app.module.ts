@@ -1,3 +1,4 @@
+import { FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule, LOCALE_ID } from '@angular/core';
 import { HttpModule } from '@angular/http';
@@ -18,6 +19,11 @@ import { ShoppingCartComponent } from './restaurants/restaurant-detail/menu/shop
 import { MenuItemComponent } from './restaurants/restaurant-detail/menu/menu-item/menu-item.component';
 import { ReviewsComponent } from './restaurants/restaurant-detail/reviews/reviews.component';
 import { ShoppingCartService } from 'app/restaurants/restaurant-detail/menu/shopping-cart/shopping-cart.service';
+import { OrderComponent } from './order/order.component';
+import { InputComponent } from './shared/input/input.component';
+import { RadioComponent } from './shared/radio/radio.component';
+import { OrderItemsComponent } from './order/order-items/order-items.component';
+import { OrderService } from 'app/order/order.service';
 
 @NgModule({
   declarations: [
@@ -31,15 +37,21 @@ import { ShoppingCartService } from 'app/restaurants/restaurant-detail/menu/shop
     MenuComponent,
     ShoppingCartComponent,
     MenuItemComponent,
-    ReviewsComponent
+    ReviewsComponent,
+    OrderComponent,
+    InputComponent,
+    RadioComponent,
+    OrderItemsComponent
   ],
   imports: [
     BrowserModule,
     HttpModule,
+    FormsModule,
     RouterModule.forRoot(ROUTES)
   ],
   providers: [
     RestaurantsService,
+    OrderService,
     ShoppingCartService, { provide: LOCALE_ID, useValue: 'pt-BR' },
   ],
   bootstrap: [AppComponent]
