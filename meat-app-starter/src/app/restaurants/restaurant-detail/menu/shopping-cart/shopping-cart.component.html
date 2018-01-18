@@ -13,7 +13,7 @@
       </div>
       <div class="table-responsive" *ngIf="items().length">
           <table class="table">
-            <tbody *ngFor="let item of items()">
+            <tbody *ngFor="let item of items()" [@row]="rowState">
             <tr>
               <th>({{ item.quantify }}x) {{ item.menuItem.name }}</th>
               <td class="text-right">{{ item.value() | currency: 'BRL': true }}</td>

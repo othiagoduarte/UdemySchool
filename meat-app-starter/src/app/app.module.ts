@@ -20,6 +20,7 @@ import { OrderSummaryComponent } from './order/order-summary/order-summary.compo
 import { ROUTES } from './app.routes';
 
 import { SharedModule } from './shared/shared.module';
+import { NotFoundComponent } from 'app/not-found/not-found.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +34,8 @@ import { SharedModule } from './shared/shared.module';
     ShoppingCartComponent,
     MenuItemComponent,
     ReviewsComponent,
-    OrderSummaryComponent
+    OrderSummaryComponent,
+    NotFoundComponent
   ],
   imports: [
     BrowserModule,
