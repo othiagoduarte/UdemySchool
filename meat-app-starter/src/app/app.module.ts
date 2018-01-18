@@ -21,6 +21,7 @@ import { ROUTES } from './app.routes';
 
 import { SharedModule } from './shared/shared.module';
 import { NotFoundComponent } from 'app/not-found/not-found.component';
+import { LocationStrategy, HashLocationStrategy } from '@angular/common';
 
 @NgModule({
   declarations: [
@@ -45,6 +46,7 @@ import { NotFoundComponent } from 'app/not-found/not-found.component';
     RouterModule.forRoot(ROUTES, { preloadingStrategy: PreloadAllModules })
   ],
   providers: [
+    //{ provide: LocationStrategy, useClass: HashLocationStrategy },
     { provide: LOCALE_ID, useValue: 'pt-BR' }
   ],
   bootstrap: [AppComponent]
