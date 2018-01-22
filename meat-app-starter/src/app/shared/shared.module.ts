@@ -1,3 +1,4 @@
+import { LoginService } from './../security/login/login.service';
 import { NgModule, ModuleWithProviders } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
@@ -43,7 +44,8 @@ export class SharedModule {
         ShoppingCartService, 
         RestaurantsService, 
         OrderService,
-        NotificationService
+        NotificationService,
+        LoginService
       ]
     }
   }

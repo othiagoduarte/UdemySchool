@@ -441,6 +441,26 @@
         }
       ],
       "id": 5
+    },
+    {
+      "name": "Elias",
+      "email": "elias@gmail.com",
+      "emailConfirmation": "elias@gmail.com",
+      "address": "Rua Itapeva",
+      "number": "131",
+      "paymentOption": "MON",
+      "optionalAddress": "666",
+      "orderItems": [
+        {
+          "quantity": 1,
+          "menuId": "cup-cake"
+        },
+        {
+          "quantity": 1,
+          "menuId": "donut"
+        }
+      ],
+      "id": 6
     }
   ]
 }
