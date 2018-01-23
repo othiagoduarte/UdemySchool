@@ -1,3 +1,5 @@
+## Aplicação criada Junto ao Curso - Aplicações com o Novo Angular 4 - Udemy por: Tarso Bersa
+
 # Meat - Angular App Starter
 
 ## 1. Passos para começar
