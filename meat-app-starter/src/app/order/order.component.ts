@@ -6,6 +6,8 @@ import { Router } from '@angular/router';
 import { OrderService } from './order.service';
 import { FormGroup, FormBuilder, Validators, AbstractControl } from '@angular/forms';
 
+import 'rxjs/operator/do';
+
 @Component({
   selector: 'mt-order',
   templateUrl: './order.component.html',
@@ -14,6 +16,7 @@ import { FormGroup, FormBuilder, Validators, AbstractControl } from '@angular/fo
 export class OrderComponent implements OnInit {
 
   orderForm: FormGroup;
+  orderId: string;
   delivery: number = 8;
   numberPattern = /^[0-9]*$/;
 
@@ -80,11 +83,17 @@ export class OrderComponent implements OnInit {
                            .map((item:CartItem) => new OrderItem(item.quantify, item.menuItem.id))
 
     this.orderService.checkOrder(order)
+                     .do((orderId: string) => {
+                       this.orderId = orderId
+                     })
                      .subscribe((orderId: string) => {
                       this.router.navigate(['/order-summary'])
                       this.orderService.clear()
                      });
-    console.log(order)
+  };
+
+  isOrderCompleted(): boolean {
+    return this.orderId !== undefined
   };
 
 }

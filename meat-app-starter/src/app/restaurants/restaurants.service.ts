@@ -1,4 +1,3 @@
-import { ErrorHandler } from './../app.error-handler';
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpParams } from '@angular/common/http';
 
